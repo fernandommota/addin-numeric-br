@@ -1,7 +1,7 @@
-#addin-numeric-br
+#Addin Numeric BR
 
 
-##addIn created to format numbers in money BR, for CTools datatable component.
+##addIn created to format numbers in money BR(#,###.00), for CTools datatable component.
 
 
 * Instalation
