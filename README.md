@@ -10,7 +10,7 @@
 
 
 * Usage
- - In your table Component, insert the propertie Column Types the value 'numericBR' 
+ - In your table Component, insert the propertie "Column Types" the value 'numericBR' 
 
 
 That's it! 
