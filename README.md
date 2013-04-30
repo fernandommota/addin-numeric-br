@@ -1,16 +1,16 @@
-addin-numeric-br
-================
-
-addIn created to format numbers in money BR, for CTools datatable components.
+#addin-numeric-br
 
 
-Instalation
-  1 - Insert a "JavaScript Function component" 
-  2 - Insert the code of file numericBR in this component.
+##addIn created to format numbers in money BR, for CTools datatable component.
 
 
-Usage
-  In your table Component, insert the propertie Column Types the value 'numericBR' 
+* Instalation
+ - 1 - Insert a "JavaScript Function component" 
+ - 2 - Insert the code of file numericBR in this component.
+
+
+* Usage
+ - In your table Component, insert the propertie Column Types the value 'numericBR' 
 
 
 That's it! 
