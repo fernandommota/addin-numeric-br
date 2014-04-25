@@ -10,7 +10,23 @@
 
 
 * **Usage**
+ ***Default***
  - In your table Component, insert the propertie "Column Types" the value 'numericBR' 
-
+ 
+ ***Remove Cents*** 
+  - Case you need remove cents from money apply this function in "Pre Execution" propertie.
+   ```JavaScript
+   function f() {  
+       this.setAddInOptions('colType','numericBR',function(state){
+          // if(state.colIdx == 1){ // for a specific column
+               return {
+                   decimal: false
+               };
+           // }
+       });
+   }
+   ```
+   *Contribution by juliano.segoa@gmail.com*
+    
 
 That's it! 
