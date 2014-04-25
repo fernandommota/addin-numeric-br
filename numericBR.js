@@ -3,16 +3,18 @@
     name: "numericBR",
     label: "Numeric BR",
     defaults: {
-      textFormat: function(v, st) {
-          var nStr= v.toFixed(2)+'';
-		x = nStr.split('.');
-		x1 = x[0];
-		x2 = x.length > 1 ? ',' + x[1] : '';
-		var rgx = /(\d+)(\d{3})/;
-		while (rgx.test(x1)) {
-			x1 = x1.replace(rgx, '$1' + '.' + '$2');
+		decimal: true,
+		textFormat: function(v, st, opt) {		
+			var nStr= v.toFixed(2)+'';
+			x  = nStr.split('.');
+			x1 = x[0];
+			x2 = x.length > 1 ? ',' + x[1] : '';
+			var rgx = /(\d+)(\d{3})/;
+			while (rgx.test(x1)) {
+				x1 = x1.replace(rgx, '$1' + '.' + '$2');
+			}
+			return x1 + (opt.decimal ? x2 : '');		
 		}
-		return x1 + x2}
     },
     init: function(){
       $.fn.dataTableExt.oSort[this.name+'-asc'] = $.fn.dataTableExt.oSort['numeric-asc'];
