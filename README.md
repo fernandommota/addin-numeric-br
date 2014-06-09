@@ -8,7 +8,7 @@ addIn created to format numbers in money BR(#,###.00), for CTools datatable comp
 
 * **Instalation**
  - 1 - Insert a "JavaScript Function component" 
- - 2 - Insert the code of file numericBR in this component.
+ - 2 - Insert the code of file numericBR.js in this component.
 
 
 * **Usage**
@@ -38,7 +38,7 @@ addIn created to format numbers in money BR(#,###.00), for CTools datatable comp
 
 
  ***add Footer*** 
-- Use the same instructions on top and add this function on "Post Execution Propertie"
+- Use the file numericBrGrandTotal.js and add this function on "Post Execution Propertie".
 
    ```JavaScript
    function addFooter(){
