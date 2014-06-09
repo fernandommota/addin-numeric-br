@@ -1,7 +1,6 @@
 #Addin Numeric BR
 
-
-##addIn created to format numbers in money BR(#,###.00), for CTools datatable component.
+addIn created to format numbers in money BR(#,###.00), for CTools datatable component.
 
 <img src="https://raw.githubusercontent.com/fernandommota/addin-numeric-br/master/images/numericBR.PNG" alt="Example of addin-numeric-br" title="addIn numericbr" align="center" />
 
@@ -37,10 +36,10 @@
 
 <img src="https://raw.githubusercontent.com/fernandommota/addin-numeric-br/master/images/numericBrGrandTotal.PNG" alt="Example of addin-numeric-br" title="addIn numericBrGrandTotal" align="center" />
 
-Use the same instructions on top and add this function on "Post Execution Propertie"
 
  ***add Footer*** 
- 
+- Use the same instructions on top and add this function on "Post Execution Propertie"
+
    ```JavaScript
    function addFooter(){
    	var tableId='#'+this.htmlObject+'Table';
@@ -74,4 +73,5 @@ Use the same instructions on top and add this function on "Post Execution Proper
    	$(tableId+"_filter input").val(" ").keyup().val("");    
    }
    ```
+
 That's it! 
