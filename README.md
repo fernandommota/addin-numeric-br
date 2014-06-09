@@ -37,10 +37,10 @@
 
 <img src="https://raw.githubusercontent.com/fernandommota/addin-numeric-br/master/images/numericBrGrandTotal.PNG" alt="Example of addin-numeric-br" title="addIn numericBrGrandTotal" align="center" />
 
-Use the same instrunctions on top and add this function on "Post Execution Propertie"
+Use the same instructions on top and add this function on "Post Execution Propertie"
 
- ***Remove Cents*** 
-  - Case you need remove cents apply this function in "Pre Execution" propertie.
+ ***add Footer*** 
+ 
    ```JavaScript
    function addFooter(){
    	var tableId='#'+this.htmlObject+'Table';
