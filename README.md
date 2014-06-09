@@ -33,4 +33,9 @@
    *Contribution by juliano.segoa@gmail.com*
     
 
+## Grand Total 
+
+<img src="https://raw.githubusercontent.com/fernandommota/addin-numeric-br/master/images/numericBrGrandTotal.PNG" alt="Example of addin-numeric-br" title="addIn numericBrGrandTotal" align="center" />
+
+
 That's it! 
