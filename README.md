@@ -10,8 +10,6 @@ addIn created to format numbers in money BR(#,###.00), for CTools datatable comp
 
 - **Usage**
 
-  **_Default_**
-
 * In your table Component, insert the propertie "Column Types" the value 'numericBR'
 
 That's it!
