@@ -12,7 +12,7 @@ Ps. You must have enabled RequireJS.
 
 - Insert the file numericBR.js path as a "Javascript External File" resource.
 
-# Usage
+## Usage
 
 - In your table Component, insert the propertie "Column Types" the value 'numericBR'
 
