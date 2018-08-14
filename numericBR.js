@@ -1,31 +1,34 @@
 /** start addIn numericBR **/
- var numericBR = {
-    name: "numericBR",
-    label: "Numeric BR",
-    defaults: {
-		decimal: true,
-		textFormat: function(v, st, opt) {		
-			var nStr= v.toFixed(2)+'';
-			x  = nStr.split('.');
-			x1 = x[0];
-			x2 = x.length > 1 ? ',' + x[1] : '';
-			var rgx = /(\d+)(\d{3})/;
-			while (rgx.test(x1)) {
-				x1 = x1.replace(rgx, '$1' + '.' + '$2');
-			}
-			return x1 + (opt.decimal ? x2 : '');		
-		}
-    },
-    init: function(){
-      $.fn.dataTableExt.oSort[this.name+'-asc'] = $.fn.dataTableExt.oSort['numeric-asc'];
-      $.fn.dataTableExt.oSort[this.name+'-desc'] = $.fn.dataTableExt.oSort['numeric-desc'];
-    },
-    
-    implementation: function(tgt, st, opt){
-      var text = opt.textFormat.call(this, st.value, st, opt);
-      $(tgt).empty().append("<span style='text-align:right;'>"+text+"</span>");
+define([
+  "cdf/AddIn",
+  "cdf/Dashboard.Clean",
+  "cdf/lib/CCC/pvc",
+  "cdf/lib/jquery"
+], function(AddIn, Dashboard, pvc, $) {
+  //function for format with mask BR
+  formatFunction = pvc.data.numberFormat({
+    mask: "R$ #,##0.00",
+    style: {
+      decimal: ",",
+      group: "."
     }
-    
-  };
-  Dashboards.registerAddIn("Table", "colType", new AddIn(numericBR));
+  });
+
+  //register addIn
+  Dashboard.registerGlobalAddIn(
+    "Table",
+    "colType",
+    new AddIn({
+      name: "numericBR",
+      label: "Numeric BR",
+      defaults: {},
+      implementation: function(tgt, st, opt) {
+        valueFormatted = formatFunction(st.value);
+        $(tgt)
+          .empty()
+          .append(`<span>${valueFormatted}</span>`);
+      }
+    })
+  );
+});
 /** end addIn numericBR **/
